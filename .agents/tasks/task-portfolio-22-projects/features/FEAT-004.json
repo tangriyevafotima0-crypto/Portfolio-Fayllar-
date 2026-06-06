@@ -1,0 +1,31 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Create Year 3 (age 15-16) advanced projects part 2: coding-challenges, ai-study-assistant, techkids-landing, portfolio (final)",
+  "status": "pending",
+  "steps": [
+    "Create coding-challenges/ with app.py, models.py, routes/ (challenges.py, auth.py, submissions.py), templates/ (base.html, index.html, challenge.html, submit.html, leaderboard.html), static/ (style.css, script.js), challenges/ (sample challenge data in JSON). Total 600-1000 lines Python. Flask app with code submission, test cases, user profiles, difficulty levels. OOP, type hints, docstrings, modular routing. requirements.txt (flask, flask-sqlalchemy, flask-login). Professional README.md.",
+    "Create ai-study-assistant/ with app.py (main Streamlit app), assistant.py (LangChain integration), utils.py (helpers). Total 300-500 lines. Features: chat with documents, quiz generation from text, study plan creation, flashcard generation. OOP, type hints, docstrings. .env.example (OPENAI_API_KEY), requirements.txt (streamlit, langchain, openai, python-dotenv). Professional README.md.",
+    "Create techkids-landing/ with index.html, style.css (Tailwind via CDN), script.js, assets/ folder. Professional landing page for a kids coding school: hero section with CTA, features/benefits, curriculum overview, testimonials, pricing cards, FAQ accordion, contact form, footer. Fully responsive, modern design, animations. README.md.",
+    "Create portfolio/ (final portfolio) with index.html, style.css, script.js, assets/ folder. Modern professional portfolio: animated hero, skills section with progress bars, project cards with hover effects, timeline for experience, contact form, dark/light mode, smooth animations, fully responsive, performance optimized. README.md with deployment instructions."
+  ],
+  "acceptance_criteria": [
+    "All 4 Year 3 Part 2 project directories exist with complete file structures",
+    "Python files use OOP, type hints, docstrings, and modular architecture",
+    "All files have valid Python syntax",
+    "coding-challenges has proper Flask routing with Blueprints or separate route files",
+    "techkids-landing uses Tailwind CSS and has professional design markup",
+    "Final portfolio has modern design patterns and is clearly the most polished project",
+    "README files are professional and comprehensive",
+    "Line counts match specifications"
+  ],
+  "verification": [
+    "Run Python syntax check on all Year 3 Part 2 .py files",
+    "Verify coding-challenges has modular route structure",
+    "Verify techkids-landing references Tailwind CSS",
+    "Verify final portfolio has dark/light mode toggle in JS",
+    "Count total lines per project to ensure they match spec"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -1,0 +1,31 @@
+{
+  "id": "FEAT-003",
+  "type": "feat",
+  "description": "Create Year 3 (age 15-16) advanced projects part 1: ai-chatbot, quiz-platform, ai-image-generator, finance-tracker",
+  "status": "pending",
+  "steps": [
+    "Create ai-chatbot/ with app.py (main Flask app), chatbot.py (OpenAI integration), templates/index.html, static/style.css, static/script.js. Total 200-300 lines of Python. OOP with ChatBot class, type hints, docstrings, error handling, .env.example (OPENAI_API_KEY), requirements.txt (flask, openai, python-dotenv). Professional README.md with features, setup, screenshots section.",
+    "Create quiz-platform/ with app.py, models.py, routes.py (or routes/ package), templates/ (base.html, index.html, quiz.html, results.html, login.html), static/style.css. Total 400-600 lines Python. Flask with SQLite, user sessions, multiple quizzes, scoring, leaderboard. OOP models, type hints, docstrings. requirements.txt (flask, flask-sqlalchemy). Professional README.md.",
+    "Create ai-image-generator/ with app.py (150-250 lines). Streamlit UI, DALL-E API integration, prompt input, image display, download button, generation history. OOP, type hints, .env.example (OPENAI_API_KEY), requirements.txt (streamlit, openai, python-dotenv, Pillow). Professional README.md.",
+    "Create finance-tracker/ with app.py (main Streamlit app), models.py (data classes), utils.py (helper functions). Total 300-500 lines. Income/expense tracking, categories, charts (plotly), monthly reports, CSV export/import. OOP, type hints, docstrings. requirements.txt (streamlit, plotly, pandas). Professional README.md."
+  ],
+  "acceptance_criteria": [
+    "All 4 Year 3 Part 1 project directories exist with complete file structures",
+    "Python files use OOP, type hints, and docstrings consistently",
+    "All files have valid Python syntax",
+    "Each project has .env.example where API keys are needed",
+    "Each project has professional requirements.txt",
+    "README files are professional with: description, features, setup instructions, screenshots section, tech stack",
+    "Line counts match specifications",
+    "Code is modular (multiple files, separation of concerns)"
+  ],
+  "verification": [
+    "Run Python syntax check on all Year 3 Part 1 .py files",
+    "Verify modular structure (multiple .py files per project)",
+    "Verify type hints are present in function signatures",
+    "Verify .env.example files exist for API-based projects",
+    "Count total lines per project to ensure they match spec"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

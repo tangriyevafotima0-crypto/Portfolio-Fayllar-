@@ -1,0 +1,32 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Create root-level repo files (.gitignore, README.md) and all 7 Year 1 (age 13) beginner projects: my-first-website, rock-paper-scissors, number-guessing-game, simple-calculator, quiz-game, my-diary-app, scratch-maze-game",
+  "status": "in_progress",
+  "steps": [
+    "Create root .gitignore (Python, Node, env files, __pycache__, .env, venv, node_modules, .DS_Store)",
+    "Create root README.md with portfolio overview listing all 22 projects grouped by year",
+    "Create my-first-website/ with index.html, about.html, hobbies.html, contact.html and style.css. Simple beginner HTML/CSS, basic structure, inline styles mixed with CSS file, no responsive design. README.md with 3-4 lines.",
+    "Create rock-paper-scissors/ with main.py (30-50 lines). Use while loop, input(), if/elif, score tracking. Beginner style: no functions, inconsistent variable names, simple print statements. README.md.",
+    "Create number-guessing-game/ with game.py (40-60 lines). Random number 1-100, difficulty levels (easy/medium/hard = different attempt counts). Beginner style. README.md.",
+    "Create simple-calculator/ with calculator.py (50-70 lines). Menu-driven, basic operations (+,-,*,/), uses functions but inconsistent naming. README.md.",
+    "Create quiz-game/ with quiz.py (60-80 lines). 10 questions stored in list of dicts, score tracking, shows correct answer on wrong answer. README.md.",
+    "Create my-diary-app/ with diary.py (70-100 lines). Console app, write/read/search entries, saves to diary.txt, file handling with open(). README.md.",
+    "Create scratch-maze-game/ with README.md describing the Scratch maze game project, link to scratch.mit.edu, and a screenshots/ folder with a placeholder .gitkeep"
+  ],
+  "acceptance_criteria": [
+    "All 7 Year 1 project directories exist with appropriate files",
+    "Python files have valid syntax (parseable by Python)",
+    "HTML files are valid and renderable",
+    "Code style is intentionally beginner: no OOP, inconsistent naming, TODO comments, simple structure",
+    "Each project has a simple README (2-5 lines, casual tone)",
+    "Line counts match specifications approximately"
+  ],
+  "verification": [
+    "Run `find /projects/sandbox/Portfolio-Fayllar- -name '*.py' -path '*/rock-paper-scissors/*' -o -name '*.py' -path '*/number-guessing*' -o -name '*.py' -path '*/simple-calculator/*' -o -name '*.py' -path '*/quiz-game/*' -o -name '*.py' -path '*/my-diary-app/*' | xargs -I {} python3 -c \"import ast; ast.parse(open('{}').read()); print('{} OK')\"` to verify all Python files parse correctly",
+    "Verify each directory has a README.md",
+    "Count lines in Python files to ensure they match spec approximately"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

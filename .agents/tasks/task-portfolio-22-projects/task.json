@@ -1,0 +1,7 @@
+{
+  "task_id": "task-portfolio-22-projects",
+  "task_description": "Create a complete portfolio with 22 projects spanning 3 years of developer growth (ages 13-16). Projects range from simple Python scripts to full-stack web apps with AI integration. Code quality must evolve naturally across years.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003", "FEAT-004"],
+  "blocked_reason": null
+}

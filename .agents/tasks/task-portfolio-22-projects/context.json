@@ -1,0 +1,16 @@
+{
+  "project_type": "Multi-project portfolio repository (greenfield)",
+  "language": "Python, HTML/CSS/JS, React",
+  "build_system": "None (individual projects have their own requirements)",
+  "test_framework": "pytest for Year 3 projects",
+  "build_command": "N/A (individual projects)",
+  "test_command": "python -m pytest (for Year 3 projects with tests)",
+  "verification_instructions": "Verify Python scripts have valid syntax with `python -c 'import ast; ast.parse(open(f).read())'`. Verify HTML is well-formed. Check each project has README.",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "No global setup needed. Each project is self-contained.",
+  "environment_constraints": "OPEN_INTERNET - full network access available. Python 3.11, Node.js 22, npm available.",
+  "contribution_requirements": "Each project in its own folder. Code quality evolves across years. READMEs evolve from simple to professional.",
+  "key_patterns": "Year 1: messy beginner code, no OOP, inconsistent naming, simple comments. Year 2: functions, organization, basic error handling. Year 3: OOP, modular, type hints, docstrings, tests.",
+  "relevant_files": [],
+  "directory_structure": "Root contains 22 project directories plus root-level .gitignore and README"
+}

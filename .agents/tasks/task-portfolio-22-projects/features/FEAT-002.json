@@ -1,0 +1,32 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Create all 7 Year 2 (age 14) intermediate projects: weather-app, todo-app-gui, password-generator, personal-blog, snake-game, telegram-helper-bot, portfolio-v1",
+  "status": "pending",
+  "steps": [
+    "Create weather-app/ with weather.py (80-120 lines). Uses requests + OpenWeatherMap API, .env.example with API_KEY placeholder, functions for fetching/displaying weather, basic error handling, requirements.txt (requests, python-dotenv). README.md with setup instructions.",
+    "Create todo-app-gui/ with todo.py (120-160 lines). Tkinter GUI, add/delete/mark complete tasks, saves to JSON file, functions but not classes. requirements.txt (just standard lib). README.md.",
+    "Create password-generator/ with generator.py (100-140 lines). Tkinter GUI, length slider, checkboxes for uppercase/lowercase/numbers/symbols, copy to clipboard, password strength indicator. README.md.",
+    "Create personal-blog/ with index.html, blog.html, post1.html, style.css, script.js. Responsive design with media queries, dark mode toggle in JS, CSS grid/flexbox layout, navbar, footer. README.md.",
+    "Create snake-game/ with snake.py (150-200 lines). Pygame implementation, arrow key controls, food spawning, score display, game over screen, increasing speed. requirements.txt (pygame). README.md with screenshot placeholder.",
+    "Create telegram-helper-bot/ with bot.py (100-150 lines). python-telegram-bot library, /start /help /quiz /fact commands, basic conversation. .env.example with BOT_TOKEN. requirements.txt (python-telegram-bot, python-dotenv). README.md.",
+    "Create portfolio-v1/ with index.html, style.css, script.js. Single-page portfolio with sections: hero, about, projects, contact. Smooth scroll, basic animations, responsive. README.md."
+  ],
+  "acceptance_criteria": [
+    "All 7 Year 2 project directories exist with appropriate files",
+    "Python files have valid syntax",
+    "HTML/CSS/JS files are well-formed",
+    "Code shows improvement over Year 1: functions, better naming, some error handling, comments",
+    "API-based projects have .env.example files (never real keys)",
+    "Each project has requirements.txt where applicable",
+    "README files are more detailed than Year 1 (include setup instructions, features list)"
+  ],
+  "verification": [
+    "Run Python syntax check on all Year 2 .py files",
+    "Verify .env.example files exist for weather-app and telegram-helper-bot",
+    "Verify requirements.txt exist where needed",
+    "Count lines in Python files to ensure they match spec approximately"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}
