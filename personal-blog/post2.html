@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building My First GUI App - MyBlog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html">MyBlog</a>
+        </div>
+        <button class="dark-mode-toggle" id="darkModeBtn" aria-label="Toggle dark mode">
+            🌙
+        </button>
+    </nav>
+
+    <main class="container">
+        <article class="blog-post">
+            <header class="post-header">
+                <a href="index.html" class="back-link">&larr; Back to all posts</a>
+                <h1>Building My First GUI App</h1>
+                <span class="post-date">December 3, 2024</span>
+            </header>
+
+            <div class="post-content">
+                <p>After months of writing command-line programs, I wanted to make something with actual buttons and windows. That is when I discovered Tkinter.</p>
+
+                <h2>What is Tkinter?</h2>
+                <p>Tkinter is Python's built-in library for creating graphical user interfaces. It comes pre-installed with Python, so you do not need to install anything extra. That made it perfect for a beginner like me.</p>
+
+                <h2>The To-Do App</h2>
+                <p>I decided to build a to-do list app because it seemed simple enough but still useful. I wanted it to have:</p>
+                <ul>
+                    <li>An entry field to type new tasks</li>
+                    <li>A list showing all tasks</li>
+                    <li>Buttons to add, delete, and mark tasks as done</li>
+                    <li>Saving tasks to a file so they persist</li>
+                </ul>
+
+                <h2>Challenges</h2>
+                <p>The hardest part was learning how GUI layouts work. Unlike print statements that just go line by line, you have to think about where each widget goes on the screen. Frames, packing, and grid layouts took some getting used to.</p>
+                <p>Another challenge was connecting the GUI to the logic. When someone clicks a button, what should happen? Event-driven programming was a new concept for me.</p>
+
+                <h2>The Result</h2>
+                <p>After a few days of work, I had a working to-do app! It is not the prettiest thing in the world, but it works and I am proud of it. Next I want to try building a game with Pygame.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 MyBlog. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

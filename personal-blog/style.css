@@ -1,0 +1,224 @@
+/* Personal Blog - Styles */
+/* Uses CSS Grid, Flexbox, and responsive design */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --card-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --footer-bg: #f1f5f9;
+    --nav-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --card-bg: #16213e;
+    --border-color: #2a2a4a;
+    --accent-color: #60a5fa;
+    --accent-hover: #93c5fd;
+    --footer-bg: #0f0f23;
+    --nav-bg: #16213e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-brand a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Blog header */
+.blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-header p {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 1.1rem;
+}
+
+/* Posts grid */
+.posts-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.post-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-card .post-date {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.post-card h2 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+}
+
+.post-card h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-card h2 a:hover {
+    color: var(--accent-color);
+}
+
+.post-card p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.read-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    color: var(--accent-hover);
+}
+
+/* Blog post page */
+.blog-post {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.post-header {
+    margin-bottom: 2rem;
+}
+
+.back-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.post-header h1 {
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.post-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+.post-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-content li {
+    margin-bottom: 0.4rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .blog-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .post-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .post-card {
+        padding: 1rem;
+    }
+}

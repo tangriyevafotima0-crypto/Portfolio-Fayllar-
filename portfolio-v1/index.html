@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fayllar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Fayllar</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content fade-in">
+            <h1>Hi, I'm <span class="highlight">Fayllar</span></h1>
+            <p class="hero-subtitle">A student developer passionate about building things with code</p>
+            <a href="#projects" class="btn btn-primary">See My Projects</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content fade-in">
+                <p>I am a 14-year-old developer who started learning to code a year ago. What started as curiosity has become a real passion. I love solving problems and building useful tools.</p>
+                <p>I mainly work with Python and am learning web development. I enjoy creating games, building apps with GUIs, and exploring APIs. Every project teaches me something new!</p>
+                <p>When I am not coding, I enjoy playing video games, reading about technology, and learning new things online.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <h3>Weather App</h3>
+                    <p>Command-line app that fetches real-time weather data from OpenWeatherMap API.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Snake Game</h3>
+                    <p>Classic snake game built with Pygame. Features increasing speed and score tracking.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pygame</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>To-Do App</h3>
+                    <p>GUI to-do list with Tkinter. Add, delete, mark complete, and save tasks.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Telegram Bot</h3>
+                    <p>Fun bot that sends quizzes, facts, and motivational quotes.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Telegram API</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Personal Blog</h3>
+                    <p>Responsive blog with dark mode toggle and CSS Grid layout.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Password Generator</h3>
+                    <p>GUI app to generate secure passwords with customizable options.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid fade-in">
+                <div class="skill-item">
+                    <h4>Python</h4>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4>HTML & CSS</h4>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 40%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4>Git & GitHub</h4>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4>Tkinter</h4>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4>Pygame</h4>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 45%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact</h2>
+            <div class="contact-content fade-in">
+                <p>Want to collaborate or just say hello? Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="https://github.com/Fayllar" class="contact-link">GitHub</a>
+                    <a href="https://t.me/fayllar" class="contact-link">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Fayllar. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html">MyBlog</a>
+        </div>
+        <button class="dark-mode-toggle" id="darkModeBtn" aria-label="Toggle dark mode">
+            🌙
+        </button>
+    </nav>
+
+    <main class="container">
+        <header class="blog-header">
+            <h1>Welcome to My Blog</h1>
+            <p>Thoughts on programming, learning, and life as a student developer</p>
+        </header>
+
+        <section class="posts-grid">
+            <article class="post-card">
+                <span class="post-date">November 15, 2024</span>
+                <h2><a href="post1.html">Why I Started Learning Python</a></h2>
+                <p>My journey into programming started with curiosity about how apps work. Here is how Python became my first real language...</p>
+                <a href="post1.html" class="read-more">Read more &rarr;</a>
+            </article>
+
+            <article class="post-card">
+                <span class="post-date">December 3, 2024</span>
+                <h2><a href="post2.html">Building My First GUI App</a></h2>
+                <p>Moving from command-line programs to graphical interfaces was a big step. I learned Tkinter and built a to-do app...</p>
+                <a href="post2.html" class="read-more">Read more &rarr;</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 MyBlog. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
