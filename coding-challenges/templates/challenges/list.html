@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}All Challenges - Code Challenges{% endblock %}
+
+{% block content %}
+<section class="challenges-page">
+    <div class="page-header">
+        <h1>Coding Challenges</h1>
+        <p>Choose a challenge and test your skills</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filter-group">
+            <label>Difficulty:</label>
+            <a href="{{ url_for('challenges.list_challenges') }}"
+               class="filter-btn {{ 'active' if not current_difficulty }}">All</a>
+            <a href="{{ url_for('challenges.list_challenges', difficulty='easy') }}"
+               class="filter-btn easy {{ 'active' if current_difficulty == 'easy' }}">Easy</a>
+            <a href="{{ url_for('challenges.list_challenges', difficulty='medium') }}"
+               class="filter-btn medium {{ 'active' if current_difficulty == 'medium' }}">Medium</a>
+            <a href="{{ url_for('challenges.list_challenges', difficulty='hard') }}"
+               class="filter-btn hard {{ 'active' if current_difficulty == 'hard' }}">Hard</a>
+        </div>
+        <div class="filter-group">
+            <label>Category:</label>
+            <a href="{{ url_for('challenges.list_challenges') }}"
+               class="filter-btn {{ 'active' if not current_category }}">All</a>
+            {% for cat in categories %}
+            <a href="{{ url_for('challenges.list_challenges', category=cat) }}"
+               class="filter-btn {{ 'active' if current_category == cat }}">{{ cat|capitalize }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="challenge-grid">
+        {% for challenge in challenges %}
+        <div class="challenge-card">
+            <div class="card-header">
+                <span class="difficulty-badge {{ challenge.get_difficulty_color() }}">
+                    {{ challenge.difficulty|capitalize }}
+                </span>
+                <span class="points-badge">{{ challenge.points }} pts</span>
+            </div>
+            <h3>{{ challenge.title }}</h3>
+            <p class="card-description">{{ challenge.description[:100] }}...</p>
+            <p class="card-category">{{ challenge.category }}</p>
+            <div class="card-footer">
+                <span class="solved-count">{{ challenge.times_solved }} solves</span>
+                <a href="{{ url_for('challenges.detail', challenge_id=challenge.id) }}" class="btn btn-sm">
+                    Solve &rarr;
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <p class="empty-state">No challenges found matching your filters.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

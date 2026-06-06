@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Code Challenges - Sharpen Your Skills{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Level Up Your <span class="highlight">Coding Skills</span></h1>
+        <p class="hero-description">
+            Solve challenges, earn points, and climb the leaderboard.
+            Practice algorithms, data structures, and problem-solving.
+        </p>
+        <div class="hero-actions">
+            <a href="{{ url_for('challenges.list_challenges') }}" class="btn btn-primary btn-lg">
+                Start Coding
+            </a>
+            <a href="{{ url_for('leaderboard.global_leaderboard') }}" class="btn btn-outline btn-lg">
+                View Leaderboard
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">{{ featured_challenges|length }}+</span>
+                <span class="stat-label">Challenges</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Difficulty Levels</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Points Available</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured-section">
+    <h2>Featured Challenges</h2>
+    <div class="challenge-grid">
+        {% for challenge in featured_challenges %}
+        <div class="challenge-card">
+            <div class="card-header">
+                <span class="difficulty-badge {{ challenge.get_difficulty_color() }}">
+                    {{ challenge.difficulty|capitalize }}
+                </span>
+                <span class="points-badge">{{ challenge.points }} pts</span>
+            </div>
+            <h3>{{ challenge.title }}</h3>
+            <p class="card-category">{{ challenge.category }}</p>
+            <div class="card-footer">
+                <span class="solved-count">Solved {{ challenge.times_solved }} times</span>
+                <a href="{{ url_for('challenges.detail', challenge_id=challenge.id) }}" class="btn btn-sm">
+                    Solve &rarr;
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

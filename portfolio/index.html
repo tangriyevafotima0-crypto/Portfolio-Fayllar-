@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a young developer showcasing 3 years of coding projects">
+    <title>Portfolio | Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="loading light-mode">
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#timeline" class="nav-link">Journey</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button id="mobile-nav-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div id="nav-mobile">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#timeline" class="nav-link">Journey</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-canvas-container">
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-animate="fade-up">
+                <p class="hero-greeting">Hello, World! I'm</p>
+                <h1 class="hero-name">Fayllar</h1>
+                <div class="hero-title">
+                    <span id="typed-text"></span>
+                    <span class="typed-cursor"></span>
+                </div>
+                <p class="hero-description">
+                    A passionate young developer with 3 years of coding experience.
+                    I build web applications, explore AI, and solve problems with code.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 7l5 5 5-5"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know the person behind the code</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-photo" data-animate="fade-right">
+                    <span class="about-photo-placeholder">👨‍💻</span>
+                </div>
+                <div class="about-text" data-animate="fade-left">
+                    <p>
+                        I started coding at age 13 with simple Python scripts and basic HTML pages.
+                        Over three years, I've grown from writing "Hello World" to building full-stack
+                        web applications and experimenting with AI.
+                    </p>
+                    <p>
+                        I'm passionate about clean code, creative problem solving, and building
+                        things that make a difference. Every project in this portfolio represents
+                        a step in my learning journey.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me participating in hackathons,
+                        learning new technologies, or teaching younger students the basics
+                        of programming.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="about-info-item">
+                            <span class="label">Age:</span>
+                            <span>16</span>
+                        </div>
+                        <div class="about-info-item">
+                            <span class="label">Experience:</span>
+                            <span>3 Years</span>
+                        </div>
+                        <div class="about-info-item">
+                            <span class="label">Projects:</span>
+                            <span>22+</span>
+                        </div>
+                        <div class="about-info-item">
+                            <span class="label">Focus:</span>
+                            <span>Full-Stack & AI</span>
+                        </div>
+                    </div>
+                    <div class="resume-btn">
+                        <a href="#" class="btn btn-outline">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Tools and languages I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category" data-animate="fade-up" data-delay="0">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML & CSS</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Tailwind CSS</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
+                    </div>
+                </div>
+                <div class="skill-category" data-animate="fade-up" data-delay="150">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Flask</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">SQL / SQLite</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">REST APIs</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                    </div>
+                </div>
+                <div class="skill-category" data-animate="fade-up" data-delay="300">
+                    <h3 class="skill-category-title">Tools & Other</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">AI / LangChain</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Linux / Terminal</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Problem Solving</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">A selection of work from my coding journey</p>
+            </div>
+            <div class="filter-bar" data-animate="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="year1">Year 1</button>
+                <button class="filter-btn" data-filter="year2">Year 2</button>
+                <button class="filter-btn" data-filter="year3">Year 3</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="year3" data-animate="fade-up">
+                    <div class="project-thumb">🏆</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Code Challenges Platform</h3>
+                        <p class="project-desc">Full-stack Flask app with code execution, scoring, and leaderboards.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">SQLAlchemy</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Code &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="year3" data-animate="fade-up" data-delay="100">
+                    <div class="project-thumb">🤖</div>
+                    <div class="project-info">
+                        <h3 class="project-title">AI Study Assistant</h3>
+                        <p class="project-desc">LangChain-powered study tool with quiz and flashcard generation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">LangChain</span>
+                            <span class="project-tag">OpenAI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Code &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="year3" data-animate="fade-up" data-delay="200">
+                    <div class="project-thumb">💰</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Finance Tracker</h3>
+                        <p class="project-desc">CLI finance tool with SQLite, analytics, and data visualization.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">SQLite</span>
+                            <span class="project-tag">OOP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Code &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="year2" data-animate="fade-up">
+                    <div class="project-thumb">🌐</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-desc">Real-time weather app using OpenWeatherMap API.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">API</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Code &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="year2" data-animate="fade-up" data-delay="100">
+                    <div class="project-thumb">📝</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Todo App (React)</h3>
+                        <p class="project-desc">Full-featured task manager with categories and persistence.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">localStorage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Code &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="year1" data-animate="fade-up">
+                    <div class="project-thumb">🎮</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Number Guessing Game</h3>
+                        <p class="project-desc">My first Python project - a simple terminal game.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Beginner</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Code &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">My Journey</h2>
+                <p class="section-subtitle">Three years of growth and learning</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-animate="fade-right">
+                    <span class="timeline-year">2022 - Year 1 (Age 13)</span>
+                    <h3 class="timeline-title">The Beginning</h3>
+                    <p class="timeline-desc">
+                        Started with Python basics - variables, loops, and simple games.
+                        Built my first website with HTML/CSS. Discovered the joy of making
+                        things work with code.
+                    </p>
+                </div>
+                <div class="timeline-item" data-animate="fade-right" data-delay="100">
+                    <span class="timeline-year">2023 - Year 2 (Age 14)</span>
+                    <h3 class="timeline-title">Building Confidence</h3>
+                    <p class="timeline-desc">
+                        Learned JavaScript, React basics, and APIs. Started using Git for
+                        version control. Built interactive web apps and learned about
+                        responsive design. Participated in my first hackathon.
+                    </p>
+                </div>
+                <div class="timeline-item" data-animate="fade-right" data-delay="200">
+                    <span class="timeline-year">2024 - Year 3 (Age 15-16)</span>
+                    <h3 class="timeline-title">Going Professional</h3>
+                    <p class="timeline-desc">
+                        Mastered Flask backend development, databases, and OOP. Explored
+                        AI with LangChain and OpenAI. Built full-stack applications with
+                        proper architecture. Started teaching younger students.
+                    </p>
+                </div>
+                <div class="timeline-item" data-animate="fade-right" data-delay="300">
+                    <span class="timeline-year">Next</span>
+                    <h3 class="timeline-title">The Future</h3>
+                    <p class="timeline-desc">
+                        Planning to dive deeper into machine learning, contribute to open source,
+                        and explore cloud deployment. Aiming to build products that help people.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Milestones along the way</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-animate="fade-up">
+                    <div class="achievement-icon">🏆</div>
+                    <h4 class="achievement-title">Hackathon Winner</h4>
+                    <p class="achievement-desc">1st place at Regional Youth Hackathon 2024</p>
+                </div>
+                <div class="achievement-card" data-animate="fade-up" data-delay="100">
+                    <div class="achievement-icon">📜</div>
+                    <h4 class="achievement-title">Python Certified</h4>
+                    <p class="achievement-desc">PCEP - Certified Entry-Level Python Programmer</p>
+                </div>
+                <div class="achievement-card" data-animate="fade-up" data-delay="200">
+                    <div class="achievement-icon">👨‍🏫</div>
+                    <h4 class="achievement-title">Taught 20+ Students</h4>
+                    <p class="achievement-desc">Volunteer coding instructor for beginners</p>
+                </div>
+                <div class="achievement-card" data-animate="fade-up" data-delay="300">
+                    <div class="achievement-icon">🚀</div>
+                    <h4 class="achievement-title">22 Projects</h4>
+                    <p class="achievement-desc">Built 22 projects across 3 years of learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have a question or want to work together?</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always interested in new opportunities, collaborations, or just
+                        chatting about code. Feel free to reach out!
+                    </p>
+                    <div class="contact-links">
+                        <div class="contact-link-item">
+                            <span class="icon">📧</span>
+                            <span>hello@example.com</span>
+                        </div>
+                        <div class="contact-link-item">
+                            <span class="icon">📍</span>
+                            <span>Uzbekistan</span>
+                        </div>
+                        <div class="contact-link-item">
+                            <span class="icon">💼</span>
+                            <span>Open to opportunities</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">GH</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">LI</a>
+                        <a href="#" class="social-link" aria-label="Twitter">TW</a>
+                        <a href="#" class="social-link" aria-label="Telegram">TG</a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" data-animate="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made with <span class="footer-heart">&hearts;</span> by Fayllar &copy; 2024
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

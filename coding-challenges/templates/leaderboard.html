@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Leaderboard - Code Challenges{% endblock %}
+
+{% block content %}
+<section class="leaderboard-page">
+    <div class="page-header">
+        <h1>Leaderboard</h1>
+        <p>Top coders ranked by total points earned</p>
+    </div>
+
+    <div class="leaderboard-table">
+        <div class="table-header">
+            <span class="col-rank">Rank</span>
+            <span class="col-user">User</span>
+            <span class="col-solved">Solved</span>
+            <span class="col-points">Points</span>
+        </div>
+        {% if users %}
+            {% for user in users.items %}
+            <div class="table-row {{ 'top-three' if loop.index <= 3 }}">
+                <span class="col-rank">
+                    {% if loop.index == 1 %}&#127942;{% elif loop.index == 2 %}&#129352;{% elif loop.index == 3 %}&#129353;{% else %}{{ loop.index }}{% endif %}
+                </span>
+                <span class="col-user">{{ user.username }}</span>
+                <span class="col-solved">{{ user.challenges_solved }}</span>
+                <span class="col-points">{{ user.total_points }}</span>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p class="empty-state">No users on the leaderboard yet. Be the first!</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

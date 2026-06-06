@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Submission Result - {{ challenge.title }}{% endblock %}
+
+{% block content %}
+<section class="result-page">
+    <div class="result-header {{ 'result-pass' if submission.passed else 'result-fail' }}">
+        <div class="result-icon">{{ '&#10004;' if submission.passed else '&#10008;' }}</div>
+        <h1>{{ 'All Tests Passed!' if submission.passed else 'Some Tests Failed' }}</h1>
+        <p class="result-summary">
+            Passed {{ submission.tests_passed }} of {{ submission.tests_total }} test cases
+            {% if submission.points_earned > 0 %}
+            &mdash; Earned <strong>{{ submission.points_earned }} points</strong>
+            {% endif %}
+        </p>
+    </div>
+
+    <div class="test-results">
+        <h2>Test Results</h2>
+        <div class="test-list">
+            {% for test in result.test_results %}
+            <div class="test-item {{ 'test-pass' if test.passed else 'test-fail' }}">
+                <div class="test-header">
+                    <span class="test-number">Test #{{ test.test_number }}</span>
+                    <span class="test-status">{{ 'PASS' if test.passed else 'FAIL' }}</span>
+                </div>
+                <div class="test-details">
+                    <div class="test-row">
+                        <span class="label">Input:</span>
+                        <code>{{ test.input }}</code>
+                    </div>
+                    <div class="test-row">
+                        <span class="label">Expected:</span>
+                        <code>{{ test.expected }}</code>
+                    </div>
+                    {% if not test.passed %}
+                    <div class="test-row">
+                        <span class="label">Your Output:</span>
+                        <code>{{ test.actual }}</code>
+                    </div>
+                    {% if test.error %}
+                    <div class="test-row error">
+                        <span class="label">Error:</span>
+                        <code>{{ test.error }}</code>
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="result-actions">
+        <a href="{{ url_for('challenges.detail', challenge_id=challenge.id) }}" class="btn btn-primary">
+            Try Again
+        </a>
+        <a href="{{ url_for('challenges.list_challenges') }}" class="btn btn-outline">
+            More Challenges
+        </a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{
+    "title": "FizzBuzz Plus",
+    "description": "Write a function that takes an integer n and returns a list of strings from 1 to n. For multiples of 3, use 'Fizz'. For multiples of 5, use 'Buzz'. For multiples of both 3 and 5, use 'FizzBuzz'. For multiples of 7, use 'Boom'. For multiples of both 3 and 7, use 'FizzBoom'. For multiples of both 5 and 7, use 'BuzzBoom'. For multiples of 3, 5, and 7, use 'FizzBuzzBoom'. Otherwise, use the number as a string.\n\nExample:\n  Input: 7\n  Output: ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', 'Boom']\n\nYour function should be named 'solution' and accept a single integer argument.",
+    "difficulty": "medium",
+    "category": "logic",
+    "points": 25,
+    "starter_code": "def solution(n):\n    # Your code here\n    pass",
+    "test_cases": [
+        {"input": 1, "expected": ["1"]},
+        {"input": 5, "expected": ["1", "2", "Fizz", "4", "Buzz"]},
+        {"input": 7, "expected": ["1", "2", "Fizz", "4", "Buzz", "Fizz", "Boom"]},
+        {"input": 15, "expected": ["1", "2", "Fizz", "4", "Buzz", "Fizz", "Boom", "8", "Fizz", "Buzz", "11", "Fizz", "13", "Boom", "FizzBuzz"]},
+        {"input": 21, "expected": ["1", "2", "Fizz", "4", "Buzz", "Fizz", "Boom", "8", "Fizz", "Buzz", "11", "Fizz", "13", "Boom", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz", "FizzBoom"]}
+    ]
+}

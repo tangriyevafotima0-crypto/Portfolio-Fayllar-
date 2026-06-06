@@ -2,7 +2,7 @@
   "id": "FEAT-004",
   "type": "feat",
   "description": "Create Year 3 (age 15-16) advanced projects part 2: coding-challenges, ai-study-assistant, techkids-landing, portfolio (final)",
-  "status": "pending",
+  "status": "in_progress",
   "steps": [
     "Create coding-challenges/ with app.py, models.py, routes/ (challenges.py, auth.py, submissions.py), templates/ (base.html, index.html, challenge.html, submit.html, leaderboard.html), static/ (style.css, script.js), challenges/ (sample challenge data in JSON). Total 600-1000 lines Python. Flask app with code submission, test cases, user profiles, difficulty levels. OOP, type hints, docstrings, modular routing. requirements.txt (flask, flask-sqlalchemy, flask-login). Professional README.md.",
     "Create ai-study-assistant/ with app.py (main Streamlit app), assistant.py (LangChain integration), utils.py (helpers). Total 300-500 lines. Features: chat with documents, quiz generation from text, study plan creation, flashcard generation. OOP, type hints, docstrings. .env.example (OPENAI_API_KEY), requirements.txt (streamlit, langchain, openai, python-dotenv). Professional README.md.",

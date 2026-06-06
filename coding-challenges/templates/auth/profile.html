@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - {{ current_user.username }}{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="avatar">{{ current_user.username[0]|upper }}</div>
+        <div class="profile-info">
+            <h1>{{ current_user.username }}</h1>
+            <p class="member-since">Member since {{ stats.member_since }}</p>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.total_points }}</span>
+            <span class="stat-label">Total Points</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.challenges_solved }}</span>
+            <span class="stat-label">Challenges Solved</span>
+        </div>
+    </div>
+
+    <section class="recent-submissions">
+        <h2>Recent Submissions</h2>
+        {% if submissions %}
+        <div class="submissions-list">
+            {% for sub in submissions %}
+            <div class="submission-item {{ 'passed' if sub.passed else 'failed' }}">
+                <div class="sub-info">
+                    <span class="sub-status">{{ 'PASS' if sub.passed else 'FAIL' }}</span>
+                    <span class="sub-challenge">Challenge #{{ sub.challenge_id }}</span>
+                </div>
+                <div class="sub-meta">
+                    <span>{{ sub.tests_passed }}/{{ sub.tests_total }} tests</span>
+                    <span>{{ sub.points_earned }} pts</span>
+                    <span>{{ sub.created_at.strftime('%b %d, %H:%M') }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="empty-state">No submissions yet. Start solving challenges!</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{
+    "title": "Two Sum",
+    "description": "Given a list of integers and a target sum, return the indices of the two numbers that add up to the target. You may assume that each input has exactly one solution, and you may not use the same element twice.\n\nExample:\n  Input: nums = [2, 7, 11, 15], target = 9\n  Output: [0, 1]\n  Explanation: nums[0] + nums[1] = 2 + 7 = 9\n\nYour function should be named 'solution' and accept two arguments: a list of integers and a target integer.",
+    "difficulty": "easy",
+    "category": "arrays",
+    "points": 10,
+    "starter_code": "def solution(nums, target):\n    # Your code here\n    pass",
+    "test_cases": [
+        {"input": [[2, 7, 11, 15], 9], "expected": [0, 1]},
+        {"input": [[3, 2, 4], 6], "expected": [1, 2]},
+        {"input": [[1, 5, 3, 8], 9], "expected": [1, 3]},
+        {"input": [[0, 4, 3, 0], 0], "expected": [0, 3]},
+        {"input": [[-1, -2, -3, -4, -5], -8], "expected": [2, 4]}
+    ]
+}

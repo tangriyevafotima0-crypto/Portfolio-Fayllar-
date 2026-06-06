@@ -1,0 +1,16 @@
+{
+    "title": "Palindrome Check",
+    "description": "Write a function that checks whether a given string is a palindrome. A palindrome reads the same forwards and backwards. Ignore case and non-alphanumeric characters.\n\nExample:\n  Input: 'A man, a plan, a canal: Panama'\n  Output: True\n\n  Input: 'hello'\n  Output: False\n\nYour function should be named 'solution' and accept a single string argument.",
+    "difficulty": "easy",
+    "category": "strings",
+    "points": 10,
+    "starter_code": "def solution(s):\n    # Your code here\n    pass",
+    "test_cases": [
+        {"input": "racecar", "expected": true},
+        {"input": "hello", "expected": false},
+        {"input": "A man, a plan, a canal: Panama", "expected": true},
+        {"input": "", "expected": true},
+        {"input": "Was it a car or a cat I saw?", "expected": true},
+        {"input": "Python", "expected": false}
+    ]
+}

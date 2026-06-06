@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{ challenge.title }} - Code Challenges{% endblock %}
+
+{% block content %}
+<section class="challenge-detail">
+    <div class="detail-header">
+        <div class="detail-meta">
+            <span class="difficulty-badge {{ challenge.get_difficulty_color() }}">
+                {{ challenge.difficulty|capitalize }}
+            </span>
+            <span class="points-badge">{{ challenge.points }} points</span>
+            <span class="category-tag">{{ challenge.category }}</span>
+        </div>
+        <h1>{{ challenge.title }}</h1>
+    </div>
+
+    <div class="detail-body">
+        <div class="problem-description">
+            <h2>Problem Description</h2>
+            <div class="description-content">
+                {{ challenge.description }}
+            </div>
+        </div>
+
+        <div class="code-editor-section">
+            <h2>Your Solution</h2>
+            {% if current_user.is_authenticated %}
+            <form method="POST" action="{{ url_for('challenges.submit_solution', challenge_id=challenge.id) }}">
+                <div class="editor-container">
+                    <textarea name="code" id="code-editor" rows="15"
+                              placeholder="def solution(input):&#10;    # Your code here&#10;    pass">{{ challenge.starter_code }}</textarea>
+                </div>
+                <div class="editor-actions">
+                    <button type="submit" class="btn btn-primary">Submit Solution</button>
+                    <button type="button" class="btn btn-outline" id="reset-btn">Reset</button>
+                </div>
+            </form>
+            {% else %}
+            <div class="login-prompt">
+                <p>Please <a href="{{ url_for('auth.login') }}">log in</a> to submit your solution.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if submissions %}
+    <div class="previous-submissions">
+        <h2>Your Previous Submissions</h2>
+        <div class="submissions-list">
+            {% for sub in submissions %}
+            <div class="submission-item {{ 'passed' if sub.passed else 'failed' }}">
+                <span class="sub-status">{{ 'PASS' if sub.passed else 'FAIL' }}</span>
+                <span>{{ sub.tests_passed }}/{{ sub.tests_total }} tests</span>
+                <span>{{ sub.points_earned }} pts</span>
+                <span>{{ sub.created_at.strftime('%b %d at %H:%M') }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}
