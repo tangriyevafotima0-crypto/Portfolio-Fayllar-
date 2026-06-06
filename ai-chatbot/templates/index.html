@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="chat-container">
+    <div class="messages" id="messages">
+        <div class="message bot-message">
+            <div class="message-avatar">🤖</div>
+            <div class="message-content">
+                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+            </div>
+        </div>
+    </div>
+    <div class="input-area">
+        <form id="chatForm" class="chat-form">
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit" id="sendBtn">Send</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if show_history is defined and show_history %}
+<div class="results-history">
+    <h1>My Quiz Results</h1>
+    {% if results %}
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th>Quiz</th>
+                <th>Score</th>
+                <th>Correct</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.quiz.title }}</td>
+                <td>{{ result.score }}%</td>
+                <td>{{ result.correct_answers }}/{{ result.total_questions }}</td>
+                <td>{{ result.completed_at.strftime('%Y-%m-%d') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="empty-state">You haven't taken any quizzes yet.</p>
+    {% endif %}
+</div>
+{% else %}
+<div class="result-card">
+    <h1>Quiz Complete!</h1>
+    <h2>{{ quiz.title }}</h2>
+    <div class="score-display">
+        <div class="score-circle">
+            <span class="score-value">{{ score }}%</span>
+        </div>
+        <p>You got <strong>{{ correct }}</strong> out of <strong>{{ total }}</strong> questions correct.</p>
+    </div>
+    <div class="result-actions">
+        <a href="{{ url_for('quiz.quiz_list') }}" class="btn btn-primary">More Quizzes</a>
+        <a href="{{ url_for('main.dashboard') }}" class="btn btn-secondary">Dashboard</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

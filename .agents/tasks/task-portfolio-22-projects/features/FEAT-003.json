@@ -2,7 +2,7 @@
   "id": "FEAT-003",
   "type": "feat",
   "description": "Create Year 3 (age 15-16) advanced projects part 1: ai-chatbot, quiz-platform, ai-image-generator, finance-tracker",
-  "status": "pending",
+  "status": "in_progress",
   "steps": [
     "Create ai-chatbot/ with app.py (main Flask app), chatbot.py (OpenAI integration), templates/index.html, static/style.css, static/script.js. Total 200-300 lines of Python. OOP with ChatBot class, type hints, docstrings, error handling, .env.example (OPENAI_API_KEY), requirements.txt (flask, openai, python-dotenv). Professional README.md with features, setup, screenshots section.",
     "Create quiz-platform/ with app.py, models.py, routes.py (or routes/ package), templates/ (base.html, index.html, quiz.html, results.html, login.html), static/style.css. Total 400-600 lines Python. Flask with SQLite, user sessions, multiple quizzes, scoring, leaderboard. OOP models, type hints, docstrings. requirements.txt (flask, flask-sqlalchemy). Professional README.md.",

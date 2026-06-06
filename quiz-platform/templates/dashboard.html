@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <h1>Welcome, {{ current_user.username }}!</h1>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Quizzes Taken</h3>
+            <p class="stat-value">{{ total_taken }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Average Score</h3>
+            <p class="stat-value">{{ avg_score }}%</p>
+        </div>
+        <div class="stat-card">
+            <h3>Best Score</h3>
+            <p class="stat-value">{{ best_score }}%</p>
+        </div>
+    </div>
+
+    <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        {% if recent_results %}
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Quiz</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in recent_results %}
+                <tr>
+                    <td>{{ result.quiz.title }}</td>
+                    <td>{{ result.score }}%</td>
+                    <td>{{ result.completed_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="empty-state">No quiz results yet. <a href="{{ url_for('quiz.quiz_list') }}">Take a quiz!</a></p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

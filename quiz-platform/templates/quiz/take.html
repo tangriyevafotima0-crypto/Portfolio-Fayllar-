@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="quiz-container">
+    <h1>{{ quiz.title }}</h1>
+    <p class="quiz-description">{{ quiz.description }}</p>
+
+    <form method="POST" class="quiz-form">
+        {% for question in questions %}
+        <div class="question-card">
+            <h3>Question {{ loop.index }} of {{ questions|length }}</h3>
+            <p class="question-text">{{ question.text }}</p>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="question_{{ question.id }}" value="a" required>
+                    <span>{{ question.option_a }}</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="question_{{ question.id }}" value="b">
+                    <span>{{ question.option_b }}</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="question_{{ question.id }}" value="c">
+                    <span>{{ question.option_c }}</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="question_{{ question.id }}" value="d">
+                    <span>{{ question.option_d }}</span>
+                </label>
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary btn-large">Submit Answers</button>
+    </form>
+</div>
+{% endblock %}
